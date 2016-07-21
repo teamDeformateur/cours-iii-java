@@ -1,4 +1,4 @@
-package edu.formation.banque;
+package edu.formation.banque.model;
 
 import edu.formation.ISolvable;
 
@@ -49,6 +49,7 @@ public class CompteSimple extends Compte implements ISolvable
      * 
      * @see edu.formation.Compte#retirer(float)
      */
+    @Override
     public void retirer(float montant)
     {
         // je vérifie que le montant demandé est bien supérieur à zéro

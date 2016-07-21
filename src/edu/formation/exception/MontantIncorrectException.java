@@ -15,7 +15,7 @@ public class MontantIncorrectException extends Exception
      */
     public MontantIncorrectException()
     {
-        // TODO Auto-generated constructor stub
+        super("Le montant désiré doit être strictement positif.");
     }
 
     /**

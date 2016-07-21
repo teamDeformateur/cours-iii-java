@@ -1,7 +1,7 @@
 /**
  * 
  */
-package edu.formation.banque;
+package edu.formation.banque.model;
 
 import edu.formation.exception.MontantIncorrectException;
 import edu.formation.exception.SoldeInsuffisantException;
@@ -14,11 +14,11 @@ import edu.formation.exception.SoldeInsuffisantException;
  */
 public abstract class Compte
 {
-    
+
     private Client client;
-    
+
     private Banque banque;
-    
+
     /**
      * @return the client
      */
@@ -28,7 +28,8 @@ public abstract class Compte
     }
 
     /**
-     * @param client the client to set
+     * @param client
+     *            the client to set
      */
     public void setClient(Client client)
     {
@@ -44,7 +45,8 @@ public abstract class Compte
     }
 
     /**
-     * @param banque the banque to set
+     * @param banque
+     *            the banque to set
      */
     public void setBanque(Banque banque)
     {
@@ -60,7 +62,8 @@ public abstract class Compte
     }
 
     /**
-     * @param solde the solde to set
+     * @param solde
+     *            the solde to set
      */
     public void setSolde(float solde)
     {
@@ -76,7 +79,8 @@ public abstract class Compte
     }
 
     /**
-     * @param nbComptes the nbComptes to set
+     * @param nbComptes
+     *            the nbComptes to set
      */
     public static void setNbComptes(int nbComptes)
     {
@@ -84,7 +88,8 @@ public abstract class Compte
     }
 
     /**
-     * @param code the code to set
+     * @param code
+     *            the code to set
      */
     public void setCode(int code)
     {
@@ -103,11 +108,12 @@ public abstract class Compte
      * Nombre de comptes créés initialisé à zéro
      */
     private static int nbComptes = 0;
-    
-    public void attribuerClient(Client unClient){
+
+    public void attribuerClient(Client unClient)
+    {
         this.client = unClient;
     }
-    
+
     /**
      * @return the code
      */
@@ -148,7 +154,7 @@ public abstract class Compte
      * 
      * @param montant
      *            Le montant à verser sur le compte
-     * @throws MontantIncorrectException 
+     * @throws MontantIncorrectException
      */
     public void verser(float montant) throws MontantIncorrectException
     {
@@ -169,34 +175,46 @@ public abstract class Compte
      * 
      * @param montant
      *            Le montant à retirer du solde du compte
-     * @throws SoldeInsuffisantException 
+     * @throws SoldeInsuffisantException
+     * @throws MontantIncorrectException
      */
-    public void retirer(float montant) throws SoldeInsuffisantException
+    public void retirer(float montant) throws SoldeInsuffisantException, MontantIncorrectException
+    {
+        // on teste si le montant retiré est supérieur à zéro
+        this.verifMontantSupZero(montant);
+        // on teste si le montant du retrait est inférieur au solde du compte
+        this.verifSoldeSuffisant(montant);
+
+        // je retire du solde le montant correspondant
+        this.solde -= montant;
+
+    }
+
+    /**
+     * @param montant
+     * @throws SoldeInsuffisantException
+     */
+    private void verifSoldeSuffisant(float montant) throws SoldeInsuffisantException
+    {
+        if (montant >= this.solde)
+        {
+            throw new SoldeInsuffisantException();
+        }
+    }
+
+    /**
+     * @param montant
+     * @throws MontantIncorrectException
+     */
+    private void verifMontantSupZero(float montant) throws MontantIncorrectException
     {
         // je vérifie que le montant demandé est bien supérieur à zéro
-        if (montant > 0)
+        if (montant <= 0)
         {
-            // on teste si le montant du retrait est inférieur au solde du
-            // compte
-            if (montant < this.solde)
-            {
-                // je retire du solde le montant correspondant
-                this.solde -= montant;
-            }
-            // montant >= this.solde
-            else
-            {
-                throw new SoldeInsuffisantException("Vous n'avez pas assez d'argent. Va bosser!");
-            }
+            throw new MontantIncorrectException();
         }
-        // montant <= 0
-        else
-        {
-            // on affiche un message d'erreur
-            System.err.println("Le montant désiré doit être strictement positif.");
-        } // fin du bloc conditionnel (montant > 0)
     }
-    
+
     /*
      * (non-Javadoc)
      * 

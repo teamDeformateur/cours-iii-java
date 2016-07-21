@@ -15,7 +15,7 @@ public class SoldeInsuffisantException extends Exception
      */
     public SoldeInsuffisantException()
     {
-        // TODO Auto-generated constructor stub
+        super("Vous n'avez pas assez d'argent. Va bosser!");
     }
 
     /**

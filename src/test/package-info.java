@@ -5,4 +5,4 @@
  * @author Seme
  *
  */
-package main;
+package test;

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package edu.formation.banque;
+package edu.formation.banque.model;
 
 import java.util.ArrayList;
 import java.util.List;

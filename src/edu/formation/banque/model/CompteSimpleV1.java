@@ -1,4 +1,4 @@
-package edu.formation.banque;
+package edu.formation.banque.model;
 
 /**
  * @author Seme

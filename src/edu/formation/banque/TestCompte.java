@@ -3,7 +3,12 @@ package edu.formation.banque;
 import java.io.PrintStream;
 import java.util.Scanner;
 
+import edu.formation.banque.model.Banque;
+import edu.formation.banque.model.Compte;
+import edu.formation.banque.model.CompteEpargne;
+import edu.formation.banque.model.CompteSimple;
 import edu.formation.exception.MontantIncorrectException;
+import edu.formation.exception.SoldeInsuffisantException;
 
 public class TestCompte
 {
@@ -23,21 +28,39 @@ public class TestCompte
         // System.out.println(cpt1.toString());
 
         // création d'un compte Simple
-        CompteSimple cptSmpl1 = new CompteSimple(-800.0f);
+        Compte cptSmpl1 = new CompteSimple(-800.0f);
+        // création d'un compte épargne
+        Compte cptEprg1 = new CompteEpargne(450.0f, 1.5f);
+
+        // création d'un compte payant
         // dépôt d'argent
         try
         {
             cptSmpl1.verser(-1500.0f);
+            // affichage du cpt simple
+            console.println(cptSmpl1.toString());
+
+            cptEprg1.verser(-450.0f);
+            cptEprg1.retirer(50500505.0f);
+        }
+        catch (MontantIncorrectException | SoldeInsuffisantException e) 
+        {
+            e.printStackTrace();
+        }
+
+        try
+        {
+            // retrait d'argent de 2301€
+            cptSmpl1.retirer(2301.0f);
+        }
+        catch (SoldeInsuffisantException e)
+        {
+            e.printStackTrace();
         }
         catch (MontantIncorrectException e)
         {
-            console.println(e.getMessage());
+            e.printStackTrace();
         }
-        // affichage du cpt simple
-        console.println(cptSmpl1.toString());
-        // retrait d'argent de 2301€
-        cptSmpl1.retirer(2301.0f);
-
         /*
          * exemple complet
          */
@@ -72,7 +95,7 @@ public class TestCompte
                                                                  // simple
         // comme l'association entre client et compte est bidirectionnelle,
         // il faut lier le client au compte
-        //objetBanque.getComptes().get(0).attribuerClient(objetBanque.getClients().get(0));
+        // objetBanque.getComptes().get(0).attribuerClient(objetBanque.getClients().get(0));
 
         //
         // CompteSimpleV1 cs = new CompteSimpleV1(5.5f);

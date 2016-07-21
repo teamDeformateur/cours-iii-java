@@ -1,7 +1,7 @@
 /**
  * 
  */
-package edu.formation.banque;
+package edu.formation.banque.model;
 
 import edu.formation.exception.MontantIncorrectException;
 import edu.formation.exception.SoldeInsuffisantException;
@@ -57,7 +57,7 @@ public class ComptePayant extends Compte
      * @see edu.formation.Compte#retirer(float)
      */
     @Override
-    public void retirer(float montant) throws SoldeInsuffisantException
+    public void retirer(float montant) throws SoldeInsuffisantException, MontantIncorrectException
     {
         // on retire l'argent (on fait appel à la méthode de la classe mère)
         super.retirer(montant);
