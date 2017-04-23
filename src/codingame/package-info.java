@@ -1,8 +1,0 @@
-/**
- * 
- */
-/**
- * @author Seme
- *
- */
-package codingame;
