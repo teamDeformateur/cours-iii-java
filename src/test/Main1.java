@@ -11,7 +11,7 @@ public class Main1 {
         // 5.5 est implicitement un double, donc il faut le downcaster
         float a = (float) 5.5;
         float aa = 5.5F;
-        // du primitif à l'objet (wrapper)
+        // du primitif Ã  l'objet (wrapper)
         Float reel = new Float(a);
         // passage de l'objet au type primitif
         a = reel.floatValue();

@@ -3,7 +3,7 @@ package edu.formation.banque.model;
 import edu.formation.ISolvable;
 
 /**
- * Compte bancaire simple avec autorisation de découvert
+ * Compte bancaire simple avec autorisation de dÃ©couvert
  * 
  * @author Seme
  *
@@ -11,29 +11,29 @@ import edu.formation.ISolvable;
 public class CompteSimple extends Compte implements ISolvable
 {
     /**
-     * Autorisation de découvert (elle est négative)
+     * Autorisation de dÃ©couvert (elle est nÃ©gative)
      */
     private float decouvert;
 
     /**
-     * Créé un compte simple avec un solde initial de 0€
+     * CrÃ©Ã© un compte simple avec un solde initial de 0â‚¬
      * 
      * @param dec
-     *            Autorisation de découvert
+     *            Autorisation de dÃ©couvert
      */
     public CompteSimple(float dec)
     {
-        // appel du constructeur de la classe mère
+        // appel du constructeur de la classe mÃ¨re
         // super();
         this.decouvert = dec;
         System.out.println("Construction d'un CompteSimple");
     }
 
     /**
-     * Créé un compte simple complètement initialisé
+     * CrÃ©Ã© un compte simple complÃ¨tement initialisÃ©
      * 
      * @param decouvert
-     *            Autorisation de découvert
+     *            Autorisation de dÃ©couvert
      * @param solde
      *            Solde initial
      */
@@ -52,11 +52,11 @@ public class CompteSimple extends Compte implements ISolvable
     @Override
     public void retirer(float montant)
     {
-        // je vérifie que le montant demandé est bien supérieur à zéro
+        // je vÃ©rifie que le montant demandÃ© est bien supÃ©rieur Ã  zÃ©ro
         if (montant > 0)
         {
-            // on teste si le solde - montant désiré est supérieur à
-            // l'autorisation de découvert
+            // on teste si le solde - montant dÃ©sirÃ© est supÃ©rieur Ã 
+            // l'autorisation de dÃ©couvert
             if ((this.solde - montant) >= this.decouvert)
             {
                 // je retire du solde le montant correspondant
@@ -66,14 +66,14 @@ public class CompteSimple extends Compte implements ISolvable
             else
             {
                 // on affiche un message d'erreur
-                System.err.println("Opération impossible. Vous dépasseriez votre autorisation de découvert");
+                System.err.println("OpÃ©ration impossible. Vous dÃ©passeriez votre autorisation de dÃ©couvert");
             }
         }
         // montant <= 0
         else
         {
             // on affiche un message d'erreur
-            System.err.println("Le montant désiré doit être strictement positif.");
+            System.err.println("Le montant dÃ©sirÃ© doit Ãªtre strictement positif.");
         } // fin du bloc conditionnel (montant > 0)
     }
 
@@ -86,7 +86,7 @@ public class CompteSimple extends Compte implements ISolvable
     public String toString()
     {
 
-        return "Compte simple n°" + this.getCode() + ", solde = " + this.solde + ", découvert = " + this.decouvert;
+        return "Compte simple nÂ°" + this.getCode() + ", solde = " + this.solde + ", dÃ©couvert = " + this.decouvert;
     }
 
     /*
@@ -97,7 +97,7 @@ public class CompteSimple extends Compte implements ISolvable
     @Override
     public void solder()
     {
-        // réinitilise le solde du compte à zéro euro        
+        // rÃ©initilise le solde du compte Ã  zÃ©ro euro        
         this.solde = 0.0f;
 
     }

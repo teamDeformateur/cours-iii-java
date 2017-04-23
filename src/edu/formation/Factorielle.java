@@ -6,7 +6,7 @@ public class Factorielle {
                 
         System.out.println("Hello World !");
         if(args != null && args.length > 0 && args[0].equals("-choix")){
-            System.out.println("Un choix a été fait !!!!");
+            System.out.println("Un choix a Ã©tÃ© fait !!!!");
         }
     }
 

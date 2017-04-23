@@ -14,7 +14,7 @@ public class CompteSimpleV1 extends CompteV1 {
      * @param dec
      */
     public CompteSimpleV1(float dec){
-        // appel du constructeur de la classe mère
+        // appel du constructeur de la classe mÃ¨re
         super();
         this.decouvert = dec;
         System.out.println("Construction d'un CompteSimple");

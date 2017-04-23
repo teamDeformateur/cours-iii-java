@@ -20,7 +20,7 @@ public class Ex2 {
         
         for(int j = 2; j <= n; ++j){
             res[j] = res[j-1] + res[j-2];
-            // 1ère itération
+            // 1Ã¨re itÃ©ration
             // res[2] = res[1] + res[0]
         }
         
@@ -35,7 +35,7 @@ public class Ex2 {
         n = scan.nextInt();
         
         res = frec(n);
-        System.out.println("Résultat = " + res);
+        System.out.println("RÃ©sultat = " + res);
         scan.close();
         
         resTab = fit(n);

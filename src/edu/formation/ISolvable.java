@@ -10,7 +10,7 @@ package edu.formation;
 public interface ISolvable
 {
     /**
-     * Réinitialise le solde de l'élément solvable à zéro
+     * RÃ©initialise le solde de l'Ã©lÃ©ment solvable Ã  zÃ©ro
      */
     public void solder();
     /**

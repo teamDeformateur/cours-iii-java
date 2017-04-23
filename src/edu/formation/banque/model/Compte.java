@@ -105,7 +105,7 @@ public abstract class Compte
      */
     protected float solde;
     /**
-     * Nombre de comptes créés initialisé à zéro
+     * Nombre de comptes crÃ©Ã©s initialisÃ© Ã  zÃ©ro
      */
     private static int nbComptes = 0;
 
@@ -123,42 +123,42 @@ public abstract class Compte
     }
 
     /**
-     * Constructeur par défaut
+     * Constructeur par dÃ©faut
      */
     public Compte()
     {
-        // j'initialise le solde à zéro
+        // j'initialise le solde Ã  zÃ©ro
         this.solde = 0;
-        // on incrémente le nombre de comptes et on retourne la valeur
+        // on incrÃ©mente le nombre de comptes et on retourne la valeur
         this.code = ++Compte.nbComptes;
         System.out.println("Construction d'un compte");
     }
 
     /**
-     * Créé un compte initialisé à un solde donné
+     * CrÃ©Ã© un compte initialisÃ© Ã  un solde donnÃ©
      * 
      * @param solde
      *            Le solde initial
      */
     public Compte(float solde)
     {
-        // j'initialise le solde au montant désiré
+        // j'initialise le solde au montant dÃ©sirÃ©
         this.solde = solde;
-        // on incrémente le nombre de comptes et on retourne la valeur
+        // on incrÃ©mente le nombre de comptes et on retourne la valeur
         this.code = ++Compte.nbComptes;
         System.out.println("Construction d'un compte");
     }
 
     /**
-     * Ajoute au solde du compte le montant passé en paramètre
+     * Ajoute au solde du compte le montant passÃ© en paramÃ¨tre
      * 
      * @param montant
-     *            Le montant à verser sur le compte
+     *            Le montant Ã  verser sur le compte
      * @throws MontantIncorrectException
      */
     public void verser(float montant) throws MontantIncorrectException
     {
-        // on vérifie que le montant soit bien positif
+        // on vÃ©rifie que le montant soit bien positif
         if (montant >= 0)
         {
             // j'augmente le solde du montant correspondant
@@ -166,23 +166,23 @@ public abstract class Compte
         }
         else
         {
-            throw new MontantIncorrectException("Le montant à verser doit être positif strictement!");
+            throw new MontantIncorrectException("Le montant Ã  verser doit Ãªtre positif strictement!");
         }
     }
 
     /**
-     * Retire au solde le montant demandé
+     * Retire au solde le montant demandÃ©
      * 
      * @param montant
-     *            Le montant à retirer du solde du compte
+     *            Le montant Ã  retirer du solde du compte
      * @throws SoldeInsuffisantException
      * @throws MontantIncorrectException
      */
     public void retirer(float montant) throws SoldeInsuffisantException, MontantIncorrectException
     {
-        // on teste si le montant retiré est supérieur à zéro
+        // on teste si le montant retirÃ© est supÃ©rieur Ã  zÃ©ro
         this.verifMontantSupZero(montant);
-        // on teste si le montant du retrait est inférieur au solde du compte
+        // on teste si le montant du retrait est infÃ©rieur au solde du compte
         this.verifSoldeSuffisant(montant);
 
         // je retire du solde le montant correspondant
@@ -208,7 +208,7 @@ public abstract class Compte
      */
     private void verifMontantSupZero(float montant) throws MontantIncorrectException
     {
-        // je vérifie que le montant demandé est bien supérieur à zéro
+        // je vÃ©rifie que le montant demandÃ© est bien supÃ©rieur Ã  zÃ©ro
         if (montant <= 0)
         {
             throw new MontantIncorrectException();
@@ -222,6 +222,6 @@ public abstract class Compte
      */
     public String toString()
     {
-        return "Compte n°" + this.code + ", solde = " + this.solde;
+        return "Compte nÂ°" + this.code + ", solde = " + this.solde;
     }
 }

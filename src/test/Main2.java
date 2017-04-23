@@ -8,7 +8,7 @@ public class Main2 {
         {
             
             System.out.println("i="+i + " j=" + j);
-            // j=i++ est équivalent à 
+            // j=i++ est Ã©quivalent Ã  
             j = i;
             i = i + 1;
         }
@@ -16,7 +16,7 @@ public class Main2 {
         for(int i = 0; i < 5; ++i)
         {
             System.out.println("i=" + i);
-            // j = ++i est équivalent à
+            // j = ++i est Ã©quivalent Ã 
             i = i + 1;
             j = i;
         }

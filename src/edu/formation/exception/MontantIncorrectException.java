@@ -15,7 +15,7 @@ public class MontantIncorrectException extends Exception
      */
     public MontantIncorrectException()
     {
-        super("Le montant désiré doit être strictement positif.");
+        super("Le montant dÃ©sirÃ© doit Ãªtre strictement positif.");
     }
 
     /**

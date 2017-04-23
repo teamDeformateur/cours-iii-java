@@ -7,7 +7,7 @@ import edu.formation.exception.MontantIncorrectException;
 import edu.formation.exception.SoldeInsuffisantException;
 
 /**
- * Compte qui décrit un compte avec opérations payantes
+ * Compte qui dÃ©crit un compte avec opÃ©rations payantes
  * 
  * @author Seme
  *
@@ -15,18 +15,18 @@ import edu.formation.exception.SoldeInsuffisantException;
 public class ComptePayant extends Compte
 {
     /**
-     * Montant des frais fixe à appliquer à chaque opération
+     * Montant des frais fixe Ã  appliquer Ã  chaque opÃ©ration
      * static + final = constante => MAJUSCULES
      */
     private static final float FRAIS_FIXE = 0.5f;
 
     /**
-     * Taux à appliquer au montant de chaque opération
+     * Taux Ã  appliquer au montant de chaque opÃ©ration
      */
     private static final float TAUX = 0.055f;
 
     /**
-     * Constructeur par défaut
+     * Constructeur par dÃ©faut
      */
     public ComptePayant()
     {
@@ -40,7 +40,7 @@ public class ComptePayant extends Compte
 
     /**
      * Retourne le montant de la commission en fonction d'une base de calcul
-     * passée en paramètre
+     * passÃ©e en paramÃ¨tre
      * 
      * @param baseDeCalcul
      *            Le montant qui sert de base de calcul
@@ -59,7 +59,7 @@ public class ComptePayant extends Compte
     @Override
     public void retirer(float montant) throws SoldeInsuffisantException, MontantIncorrectException
     {
-        // on retire l'argent (on fait appel à la méthode de la classe mère)
+        // on retire l'argent (on fait appel Ã  la mÃ©thode de la classe mÃ¨re)
         super.retirer(montant);
         // on calcule la commission
         float commission = this.calculerCommission(montant);
@@ -77,7 +77,7 @@ public class ComptePayant extends Compte
     {
         // on verse l'argent sur le compte
         super.verser(montant);
-        // on déduit les frais
+        // on dÃ©duit les frais
         this.solde -= this.calculerCommission(montant);
     }
 
@@ -89,7 +89,7 @@ public class ComptePayant extends Compte
     @Override
     public String toString()
     {
-        return "Compte payant n°" + this.getCode() + ", solde = " + this.solde;
+        return "Compte payant nÂ°" + this.getCode() + ", solde = " + this.solde;
     }
 
 }

@@ -43,14 +43,14 @@ public class Client
     private Conseiller conseiller;
 
     /**
-     * Ajoute un compte à la liste des comptes bancaires du client
+     * Ajoute un compte Ã  la liste des comptes bancaires du client
      * 
      * @param compte
      */
     public void ajouterCompte(Compte compte)
     {
         this.comptes.add(compte);
-        // birectionnalité : je lie le client au compte
+        // birectionnalitÃ© : je lie le client au compte
         compte.attribuerClient(this);
     }
 
@@ -97,7 +97,7 @@ public class Client
      */
     public Client(String nom)
     {
-        // appel du constructeur par défaut
+        // appel du constructeur par dÃ©faut
         this();
         this.nom = nom;
     }

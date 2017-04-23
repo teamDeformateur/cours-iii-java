@@ -40,13 +40,13 @@ public class Banque
     }
 
     /**
-     * Ajoute un client à la liste
+     * Ajoute un client Ã  la liste
      * 
      * @param unNom
      */
     public void ajouterClient(String unNom)
     {
-        // création puis ajout d'un client à la liste
+        // crÃ©ation puis ajout d'un client Ã  la liste
         Client client = new Client(unNom);
         this.clients.add(client);
         // laison
@@ -54,14 +54,14 @@ public class Banque
     }
 
     /**
-     * Ajoute un conseiller à la liste
+     * Ajoute un conseiller Ã  la liste
      * 
      * @param unNom
      */
     public void ajouterConseiller(String unNom)
     {
         Conseiller cons = new Conseiller(unNom);
-        // création puis ajout d'un conseiller à la liste
+        // crÃ©ation puis ajout d'un conseiller Ã  la liste
         this.conseillers.add(cons);
         // liaison
         cons.setBanque(this);

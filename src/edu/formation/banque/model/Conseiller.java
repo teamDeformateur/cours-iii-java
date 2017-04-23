@@ -55,9 +55,9 @@ public class Conseiller
     }
 
     /**
-     * Ajoute un client EXISTANT à la liste des clients qui sont conseillés
+     * Ajoute un client EXISTANT Ã  la liste des clients qui sont conseillÃ©s
      * 
-     * @param unClient Le client conseillé
+     * @param unClient Le client conseillÃ©
      */
     public void ajouterClient(Client unClient)
     {

@@ -20,20 +20,20 @@ public class TestCompte
         // Compte cpt1 = new Compte();
         Scanner scan = new Scanner(System.in);
 
-        System.out.println("Rentrer le montant à verser sur le compte :");
-        // l'utilisateur rentre le montant via la console, ce montant est envoyé
-        // à la méthode verser du compte que l'on vient d'instancier
+        System.out.println("Rentrer le montant Ã  verser sur le compte :");
+        // l'utilisateur rentre le montant via la console, ce montant est envoyÃ©
+        // Ã  la mÃ©thode verser du compte que l'on vient d'instancier
         // cpt1.verser(scan.nextFloat());
 
         // System.out.println(cpt1.toString());
 
-        // création d'un compte Simple
+        // crÃ©ation d'un compte Simple
         Compte cptSmpl1 = new CompteSimple(-800.0f);
-        // création d'un compte épargne
+        // crÃ©ation d'un compte Ã©pargne
         Compte cptEprg1 = new CompteEpargne(450.0f, 1.5f);
 
-        // création d'un compte payant
-        // dépôt d'argent
+        // crÃ©ation d'un compte payant
+        // dÃ©pÃ´t d'argent
         try
         {
             cptSmpl1.verser(-1500.0f);
@@ -50,7 +50,7 @@ public class TestCompte
 
         try
         {
-            // retrait d'argent de 2301€
+            // retrait d'argent de 2301â‚¬
             cptSmpl1.retirer(2301.0f);
         }
         catch (SoldeInsuffisantException e)
@@ -64,13 +64,13 @@ public class TestCompte
         /*
          * exemple complet
          */
-        // Création de la banque
+        // CrÃ©ation de la banque
         Banque objetBanque = new Banque();
 
-        // Ajout des clients à la banque
+        // Ajout des clients Ã  la banque
         objetBanque.ajouterClient("Marius");
-        objetBanque.ajouterClient("César");
-        objetBanque.ajouterClient("Cléon");
+        objetBanque.ajouterClient("CÃ©sar");
+        objetBanque.ajouterClient("ClÃ©on");
         // ajout des conseillers
         objetBanque.ajouterConseiller("Georges");
         objetBanque.ajouterConseiller("Paulina");
@@ -83,10 +83,10 @@ public class TestCompte
                         .get(0) // premier client
         );
 
-        // Création d'un compte
+        // CrÃ©ation d'un compte
         objetBanque.ajouterCompteSimple(0.0f, -800.0f);
 
-        // Ajout du compte n°1 au client numéro 1
+        // Ajout du compte nÂ°1 au client numÃ©ro 1
         objetBanque.getClients() // la liste des clients
                 .get(0)// le premier client de la liste
                 .ajouterCompte(objetBanque.getComptes().get(0)); // j'ajoute au
