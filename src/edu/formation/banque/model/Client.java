@@ -16,31 +16,11 @@ public class Client
      * Nom du client
      */
     private String nom;
-    
-    private Banque banque;
-    /**
-     * @return the banque
-     */
-    public Banque getBanque()
-    {
-        return banque;
-    }
-
-
-    /**
-     * @param banque the banque to set
-     */
-    public void setBanque(Banque banque)
-    {
-        this.banque = banque;
-    }
 
     /**
      * Liste de comptes
      */
     private List<Compte> comptes;
-
-    private Conseiller conseiller;
 
     /**
      * Ajoute un compte à la liste des comptes bancaires du client
@@ -53,25 +33,6 @@ public class Client
         // birectionnalité : je lie le client au compte
         compte.attribuerClient(this);
     }
-
-
-    /**
-     * @return the conseiller
-     */
-    public Conseiller getConseiller()
-    {
-        return conseiller;
-    }
-
-
-    /**
-     * @param conseiller the conseiller to set
-     */
-    public void setConseiller(Conseiller conseiller)
-    {
-        this.conseiller = conseiller;
-    }
-
 
     /*
      * (non-Javadoc)

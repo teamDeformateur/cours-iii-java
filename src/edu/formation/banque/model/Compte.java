@@ -3,9 +3,6 @@
  */
 package edu.formation.banque.model;
 
-import edu.formation.exception.MontantIncorrectException;
-import edu.formation.exception.SoldeInsuffisantException;
-
 /**
  * Compte bancaire
  * 
@@ -16,8 +13,6 @@ public abstract class Compte
 {
 
     private Client client;
-
-    private Banque banque;
 
     /**
      * @return the client
@@ -36,22 +31,6 @@ public abstract class Compte
         this.client = client;
     }
 
-    /**
-     * @return the banque
-     */
-    public Banque getBanque()
-    {
-        return banque;
-    }
-
-    /**
-     * @param banque
-     *            the banque to set
-     */
-    public void setBanque(Banque banque)
-    {
-        this.banque = banque;
-    }
 
     /**
      * @return the solde
@@ -154,9 +133,8 @@ public abstract class Compte
      * 
      * @param montant
      *            Le montant à verser sur le compte
-     * @throws MontantIncorrectException
      */
-    public void verser(float montant) throws MontantIncorrectException
+    public void verser(float montant)
     {
         // on vérifie que le montant soit bien positif
         if (montant >= 0)
@@ -166,7 +144,7 @@ public abstract class Compte
         }
         else
         {
-            throw new MontantIncorrectException("Le montant à verser doit être positif strictement!");
+            // TODO
         }
     }
 
@@ -178,7 +156,7 @@ public abstract class Compte
      * @throws SoldeInsuffisantException
      * @throws MontantIncorrectException
      */
-    public void retirer(float montant) throws SoldeInsuffisantException, MontantIncorrectException
+    public void retirer(float montant)
     {
         // on teste si le montant retiré est supérieur à zéro
         this.verifMontantSupZero(montant);
@@ -194,11 +172,11 @@ public abstract class Compte
      * @param montant
      * @throws SoldeInsuffisantException
      */
-    private void verifSoldeSuffisant(float montant) throws SoldeInsuffisantException
+    private void verifSoldeSuffisant(float montant)
     {
         if (montant >= this.solde)
         {
-            throw new SoldeInsuffisantException();
+            // TODO
         }
     }
 
@@ -206,12 +184,12 @@ public abstract class Compte
      * @param montant
      * @throws MontantIncorrectException
      */
-    private void verifMontantSupZero(float montant) throws MontantIncorrectException
+    private void verifMontantSupZero(float montant)
     {
         // je vérifie que le montant demandé est bien supérieur à zéro
         if (montant <= 0)
         {
-            throw new MontantIncorrectException();
+            // TODO
         }
     }
 
