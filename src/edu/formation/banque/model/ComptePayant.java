@@ -3,6 +3,9 @@
  */
 package edu.formation.banque.model;
 
+import edu.formation.banque.exception.MontantIncorrectException;
+import edu.formation.banque.exception.SoldeInsuffisantException;
+
 /**
  * Compte qui décrit un compte avec opérations payantes
  * 
@@ -54,7 +57,7 @@ public class ComptePayant extends Compte
      * @see edu.formation.Compte#retirer(float)
      */
     @Override
-    public void retirer(float montant)
+    public void retirer(float montant) throws MontantIncorrectException, SoldeInsuffisantException
     {
         // on retire l'argent (on fait appel à la méthode de la classe mère)
         super.retirer(montant);
@@ -70,7 +73,7 @@ public class ComptePayant extends Compte
      * @see edu.formation.Compte#verser(float)
      */
     @Override
-    public void verser(float montant)
+    public void verser(float montant) throws MontantIncorrectException
     {
         // on verse l'argent sur le compte
         super.verser(montant);

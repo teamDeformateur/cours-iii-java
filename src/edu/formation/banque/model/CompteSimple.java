@@ -26,7 +26,6 @@ public class CompteSimple extends Compte implements ISolvable
         // appel du constructeur de la classe mère
         // super();
         this.decouvert = dec;
-        System.out.println("Construction d'un CompteSimple");
     }
 
     /**
@@ -41,7 +40,6 @@ public class CompteSimple extends Compte implements ISolvable
     {
         super(solde);
         this.decouvert = decouvert;
-        System.out.println("Construction d'un CompteSimple");
     }
 
     /*
