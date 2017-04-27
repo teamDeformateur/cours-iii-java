@@ -3,12 +3,12 @@ package edu.formation.banque;
 import java.io.PrintStream;
 import java.util.Scanner;
 
+import edu.formation.banque.exception.MontantIncorrectException;
+import edu.formation.banque.exception.SoldeInsuffisantException;
 import edu.formation.banque.model.Banque;
 import edu.formation.banque.model.Compte;
 import edu.formation.banque.model.CompteEpargne;
 import edu.formation.banque.model.CompteSimple;
-import edu.formation.exception.MontantIncorrectException;
-import edu.formation.exception.SoldeInsuffisantException;
 
 public class TestCompte
 {

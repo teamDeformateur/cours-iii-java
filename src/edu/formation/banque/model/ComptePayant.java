@@ -3,8 +3,8 @@
  */
 package edu.formation.banque.model;
 
-import edu.formation.exception.MontantIncorrectException;
-import edu.formation.exception.SoldeInsuffisantException;
+import edu.formation.banque.exception.MontantIncorrectException;
+import edu.formation.banque.exception.SoldeInsuffisantException;
 
 /**
  * Compte qui décrit un compte avec opérations payantes
