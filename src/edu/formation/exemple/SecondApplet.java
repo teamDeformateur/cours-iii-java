@@ -1,4 +1,4 @@
-package edu.formation;
+package edu.formation.exemple;
 
 import java.applet.Applet;
 import java.awt.Button;

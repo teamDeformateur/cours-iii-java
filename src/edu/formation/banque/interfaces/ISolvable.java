@@ -1,7 +1,7 @@
 /**
  * 
  */
-package edu.formation;
+package edu.formation.banque.interfaces;
 
 /**
  * @author Seme

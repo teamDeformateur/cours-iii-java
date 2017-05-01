@@ -1,6 +1,6 @@
 package test;
 
-public class Main2 {
+public class Main_i_plus_plus {
 
     public static void main(String[] args) {
         int j = 0;

@@ -1,4 +1,4 @@
-package edu.formation;
+package edu.formation.exemple;
 
 public class PremierProgramme {
     public static void main(String args[]) {

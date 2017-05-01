@@ -1,6 +1,6 @@
-package test;
+package edu.formation.exemple;
 
-public class Main1 {
+public class MainCasting {
 
     public static void main(String[] args) {
         int ent1 = 2;

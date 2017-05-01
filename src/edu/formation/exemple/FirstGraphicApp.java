@@ -1,4 +1,4 @@
-package edu.formation;
+package edu.formation.exemple;
 
 import java.awt.FlowLayout;
 
