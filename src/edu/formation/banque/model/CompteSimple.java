@@ -1,6 +1,6 @@
 package edu.formation.banque.model;
 
-import edu.formation.ISolvable;
+import edu.formation.banque.interfaces.ISolvable;
 
 /**
  * Compte bancaire simple avec autorisation de découvert
