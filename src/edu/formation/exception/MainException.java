@@ -6,7 +6,6 @@ package edu.formation.exception;
 import java.util.InputMismatchException;
 /**
  * @author Seme
- *
  */
 import java.util.Scanner;
 
@@ -21,7 +20,6 @@ public class MainException
     public static void main(String[] args)
     {
         Scanner clavier = new Scanner(System.in);
-
         try
         {
             System.out.print("Donner a:");
@@ -41,7 +39,8 @@ public class MainException
         {
             System.out.println("On avait dit un entier noob !");
         }
-        catch (Exception e){
+        catch (Exception e)
+        {
             System.out.println("Erreur inconnue. Appelez le support.");
         }
 
