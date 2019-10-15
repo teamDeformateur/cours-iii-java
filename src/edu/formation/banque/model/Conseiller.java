@@ -10,95 +10,83 @@ import java.util.List;
  * @author Seme
  *
  */
-public class Conseiller
-{
+public class Conseiller {
 
-    /**
-     * Liste de clients que je conseille judicieusement
-     */
-    private List<Client> clients;
-    /**
-     * nom du conseiller
-     */
-    private String nom;
-    
-    private Banque banque;
+  /**
+   * Liste de clients que je conseille judicieusement
+   */
+  private List<Client> clients;
+  /**
+   * nom du conseiller
+   */
+  private String nom;
 
-    /**
-     * @return the banque
-     */
-    public Banque getBanque()
-    {
-        return banque;
-    }
+  private Banque banque;
 
-    /**
-     * @param banque the banque to set
-     */
-    public void setBanque(Banque banque)
-    {
-        this.banque = banque;
-    }
+  /**
+   * @return the banque
+   */
+  public Banque getBanque() {
+    return banque;
+  }
 
-    /**
-     * 
-     */
-    public Conseiller()
-    {
-        this.clients = new ArrayList<>();
-    }
+  /**
+   * @param banque the banque to set
+   */
+  public void setBanque(Banque banque) {
+    this.banque = banque;
+  }
 
-    public Conseiller(String unNom)
-    {
-        this();
-        this.nom = unNom;
-    }
+  /**
+   * 
+   */
+  public Conseiller() {
+    this.clients = new ArrayList<>();
+  }
 
-    /**
-     * Ajoute un client EXISTANT à la liste des clients qui sont conseillés
-     * 
-     * @param unClient Le client conseillé
-     */
-    public void ajouterClient(Client unClient)
-    {
-        // ajoute
-        this.clients.add(unClient);
-        // bidirectionnel : le client connait son conseiller
-        unClient.setConseiller(this);
-    }
+  public Conseiller(String unNom) {
+    this();
+    this.nom = unNom;
+  }
 
-    /**
-     * @return the clients
-     */
-    public List<Client> getClients()
-    {
-        return clients;
-    }
+  /**
+   * Ajoute un client EXISTANT à la liste des clients qui sont conseillés
+   * 
+   * @param unClient Le client conseillé
+   */
+  public void ajouterClient(Client unClient) {
+    // ajoute
+    this.clients.add(unClient);
+    // bidirectionnel : le client connait son conseiller
+    unClient.setConseiller(this);
+  }
 
-    /**
-     * @param clients
-     *            the clients to set
-     */
-    public void setClients(List<Client> clients)
-    {
-        this.clients = clients;
-    }
+  /**
+   * @return the clients
+   */
+  public List<Client> getClients() {
+    return clients;
+  }
 
-    /**
-     * @return the nom
-     */
-    public String getNom()
-    {
-        return nom;
-    }
+  /**
+   * @param clients the clients to set
+   */
+  public void setClients(List<Client> clients) {
+    this.clients = clients;
+  }
 
-    /**
-     * @param nom
-     *            the nom to set
-     */
-    public void setNom(String nom)
-    {
-        this.nom = nom;
-    }
+  /**
+   * @return the nom
+   */
+  public String getNom() {
+    return nom;
+  }
+
+  /**
+   * @param nom the nom to set
+   */
+  public void setNom(String nom) {
+    this.nom = nom;
+  }
 
 }
