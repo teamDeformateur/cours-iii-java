@@ -1,27 +1,20 @@
-/**
- * 
- */
+/** */
 package edu.formation.file;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-import com.sun.swing.internal.plaf.basic.resources.basic_zh_TW;
-
-/**
- * @author Seme
- *
- */
+/** @author Seme */
 public class MainFichier {
   public static void main(String[] args) throws IOException {
     // convertirMajEnMin();
-    ecrireLigneParLigne();
-    traitementOperations();
+    // ecrireLigneParLigne();
+    // traitementOperations();
+    copierColler();
   }
 
   public static void copierColler() throws IOException {
@@ -30,7 +23,7 @@ public class MainFichier {
     File f2 = new File("fichier2.txt");
     // J'instancie un lecteur
     FileReader fr = new FileReader(f1);
-    // J'incstancie un écrivain
+    // J'instancie un écrivain
     FileWriter fw = new FileWriter(f2);
 
     int c;
@@ -47,7 +40,7 @@ public class MainFichier {
     File f2 = new File("fichier2.txt");
     // J'instancie un lecteur
     FileReader fr = new FileReader(f1);
-    // J'incstancie un écrivain
+    // J'instancie un écrivain
     FileWriter fw = new FileWriter(f2);
 
     int c;
@@ -81,7 +74,6 @@ public class MainFichier {
     br.close();
     System.out.println("Total Versement:" + totalVersements);
     System.out.println("Total Retrait:" + totalRetraits);
-
   }
 
   public static void ecrireLigneParLigne() throws IOException {
