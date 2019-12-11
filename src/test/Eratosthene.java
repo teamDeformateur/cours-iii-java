@@ -2,7 +2,7 @@ package test;
 
 import java.util.Scanner;
 
-public class Ex3_crible {
+public class Eratosthene {
 
   public static void crible(int multiple, boolean[] barre, int max) {
     for (int i = 1; i <= max; ++i) {

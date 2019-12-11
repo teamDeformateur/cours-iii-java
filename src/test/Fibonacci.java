@@ -2,7 +2,7 @@ package test;
 
 import java.util.Scanner;
 
-public class Ex2 {
+public class Fibonacci {
 
   public static int frec(int n) {
     if (n <= 1) {
