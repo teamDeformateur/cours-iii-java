@@ -1,4 +1,4 @@
-package edu.formation.poo;
+package edu.formation.poo.exemples;
 
 /**
  * Définit les caractéristiques et le comportement d'une cyclette.

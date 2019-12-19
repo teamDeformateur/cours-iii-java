@@ -1,7 +1,7 @@
 /**
  * 
  */
-package edu.formation.exception;
+package edu.formation;
 
 import java.util.InputMismatchException;
 /**

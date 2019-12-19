@@ -1,4 +1,4 @@
-package edu.formation.poo.staticite;
+package edu.formation.staticite;
 
 import edu.formation.poo.heritage.Personne;
 
