@@ -1,4 +1,4 @@
-package test;
+package edu.formation.exercices;
 
 import java.util.Scanner;
 

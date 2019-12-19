@@ -2,7 +2,6 @@ package edu.formation.banque;
 
 import java.io.PrintStream;
 import java.util.Scanner;
-
 import edu.formation.banque.exception.MontantIncorrectException;
 import edu.formation.banque.exception.SoldeInsuffisantException;
 import edu.formation.banque.model.Banque;
