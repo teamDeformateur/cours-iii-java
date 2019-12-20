@@ -2,8 +2,6 @@
 
 *.class
 
-fichier1\.txt
-
 fichier2\.txt
 
 src/Player\.java
