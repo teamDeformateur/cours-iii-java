@@ -9,3 +9,4 @@ src/Player\.java
 \.project
 
 .settings/
+/target/
