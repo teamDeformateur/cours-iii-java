@@ -49,16 +49,16 @@ public class Cyclette {
   public void seDeplacer(char direction, String sens) {
     if (velocite > 0.0f) {
       // cas 1 : avancer en x : direction == 'x', sens == "avancer"
-      if (direction == 'x' && sens == "avancer") {
+      if (direction == 'x' && sens.equals("avancer")) {
         // avancer en x
         positionX++;
       }
       // cas 2 : avancer en y : direction == 'y', sens == "avancer"
-      else if (direction == 'y' && sens == "avancer") {
+      else if (direction == 'y' && sens.equals("avancer")) {
         // avancer en y
         positionY++;
         // cas 3 : reculer en x : direction == 'x', sens == "reculer"
-      } else if (direction == 'x' && sens == "reculer") {
+      } else if (direction == 'x' && sens.equals("reculer")) {
         positionX--;
         // cas 4 : reculer en y : direction == 'y', sens == "reculer"
       } else {
