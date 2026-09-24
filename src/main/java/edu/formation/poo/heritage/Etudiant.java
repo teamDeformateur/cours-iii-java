@@ -4,81 +4,93 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Etudiant extends Personne {
-  /*
-   * données de l'objet
-   */
-  private String nom;
-  private String prenom;
-  private String[] coursTab;
-  private List<Cours> cours;
+    private static final String MOTIVATION = "Au top";
+    /*
+     * données de l'objet
+     */
+    private String[] coursTab;
+    private List<Cours> cours;
 
-  private static final String MOTIVATION = "Au top";
+    /**
+     * Constructeur par défaut de la classe.
+     */
+    public Etudiant() {
+        this.cours = new ArrayList<Cours>();
+    }
 
-  /**
-   * Constructeur par défaut de la classe.
-   */
-  public Etudiant() {
-    this.cours = new ArrayList<Cours>();
-  }
+    /**
+     *
+     * @param unNom
+     * @param unPrenom
+     */
+    public Etudiant(String unNom, String unPrenom) {
+        // Appel au constructeur de la super classe (de la classe Personne)
+        super(unNom, unPrenom);
+        // valorisation des attributs spécifiques
+        this.cours = new ArrayList<Cours>();
+        System.out.println("Étudiant " + unPrenom + " " + unNom + " instanciée.");
+    }
 
-  /**
-   * 
-   * @param unNom
-   * @param unPrenom
-   */
-  public Etudiant(String unNom, String unPrenom) {
-    this.nom = unNom;
-    this.prenom = unPrenom;
-    this.cours = new ArrayList<Cours>();
-    System.out.println("Objet " + unPrenom + " " + unNom + " instancié.");
-  }
+    /**
+     *
+     * @param unNom
+     * @param unPrenom
+     * @param uneCivilite
+     */
+    public Etudiant(String unNom, String unPrenom, String uneCivilite) {
+        // Appel au constructeur de la super classe (de la classe Personne)
+        super(unNom, unPrenom);
+        this.cours = new ArrayList<Cours>();
+        System.out.println("Étudiant " + unPrenom + " " + unNom + " instanciée.");
+    }
 
-  /**
-   * 
-   * @param unNom
-   * @param unPrenom
-   * @param desCours
-   */
-  public Etudiant(String unNom, String unPrenom, String[] desCours) {
-    this.nom = unNom;
-    this.prenom = unPrenom;
-    this.coursTab = desCours;
-    System.out.println("Objet " + unPrenom + " " + unNom + " instancié.");
-  }
+    /**
+     *
+     * @param unNom
+     * @param unPrenom
+     * @param uneCivilite
+     * @param desCours
+     */
+    public Etudiant(String unNom, String unPrenom, String uneCivilite, String[] desCours) {
+        // Appel au constructeur de la super classe (de la classe Personne)
+        super(unNom, unPrenom, uneCivilite);
+        this.coursTab = desCours;
+        System.out.println("Étudiant " + uneCivilite + " " + unPrenom + " " + unNom + " instancié.");
+    }
 
-  @Override
-  public void afficherInfos() {
-    System.out.println(
-        "Voici donc la personne étudiante de nom " + this.nom + " et de prénom " + this.prenom);
-  }
+    /**
+     * @return the motivation
+     */
+    public static String getMotivation() {
+        return Etudiant.MOTIVATION;
+    }
 
-  /*
-   * Méthodes qui manipulent les données de l'objet
-   */
-  public void ajouterCours(Cours cours) {
-    this.cours.add(cours);
-  }
+    @Override
+    public void afficherInfos() {
+        System.out.println(
+                "Voici donc la personne étudiante de nom " + this.nom + " et de prénom " + this.prenom);
+    }
 
-  public String getNom() {
-    return nom;
-  }
+    /*
+     * Méthodes qui manipulent les données de l'objet
+     */
+    public void ajouterCours(Cours cours) {
+        this.cours.add(cours);
+    }
 
-  public void setNom(String nom) {
-    this.nom = nom;
-  }
+    public String getNom() {
+        return nom;
+    }
 
-  /**
-   * @return the motivation
-   */
-  public static String getMotivation() {
-    return Etudiant.MOTIVATION;
-  }
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
 
-  /**
-   * 
-   */
-  public void afficherMotivation() {
-    System.out.println(MOTIVATION);
-  }
+    /**
+     *
+     */
+    public void afficherMotivation() {
+        System.out.println(MOTIVATION);
+    }
 
 }

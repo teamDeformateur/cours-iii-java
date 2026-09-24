@@ -1,6 +1,8 @@
 package edu.formation.universite;
 
 
+import edu.formation.poo.heritage.Etudiant;
+
 /**
  * @author Seme
  *
